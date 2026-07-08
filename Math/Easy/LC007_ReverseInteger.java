@@ -23,25 +23,34 @@ space complexity 0(1)
 import java.util.Scanner;
 
 public class LC007_ReverseInteger {
-    public static int reverseInteger(int n){
+    public static int reverse(int x) {
+        int reverse = 0;
 
-        int num=n;
-        int reverse=0;
-        while (num>0) {
+        while (x != 0) {
+            int digit = x % 10;
+            x = x / 10;
 
-            int ld=num%10;
-            reverse=reverse*10+ld;
-            num=num/10;
-            
+            if (reverse > Integer.MAX_VALUE / 10 ||
+                (reverse == Integer.MAX_VALUE / 10 && digit > 7)) {
+                return 0;
+            }
+
+            if (reverse < Integer.MIN_VALUE / 10 ||
+                (reverse == Integer.MIN_VALUE / 10 && digit < -8)) {
+                return 0;
+            }
+
+            reverse = reverse * 10 + digit;
         }
-    return reverse;
+
+        return reverse;
     }
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the value of n");
         int n=sc.nextInt();
-        System.out.println(reverseInteger(n));
+        System.out.println(reverse(n));
 
 
     }
