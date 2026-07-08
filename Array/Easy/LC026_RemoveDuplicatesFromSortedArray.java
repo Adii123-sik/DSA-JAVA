@@ -17,7 +17,7 @@ Time Complexity: O(n)
 Space Complexity: O(1)
 */
 
-import java.util.*;
+
 
 public class LC026_RemoveDuplicatesFromSortedArray {
 
