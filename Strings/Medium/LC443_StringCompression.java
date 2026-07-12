@@ -143,6 +143,7 @@ public class LC443_StringCompression {
         return write;
     }
 
+    
     public static void main(String[] args) {
 
         char[] chars = {
