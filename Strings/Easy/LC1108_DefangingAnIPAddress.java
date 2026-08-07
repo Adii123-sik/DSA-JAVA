@@ -1,4 +1,4 @@
-package String.Easy;
+package Strings.Easy;
 
 /*
 Problem: Defanging an IP Address
