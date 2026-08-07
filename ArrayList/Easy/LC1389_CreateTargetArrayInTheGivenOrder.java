@@ -1,4 +1,4 @@
-package Array.Easy;
+package ArrayList.Easy;
 
 /*
 Problem: Create Target Array in the Given Order
